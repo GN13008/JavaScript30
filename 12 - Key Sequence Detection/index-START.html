@@ -15,13 +15,18 @@
     window.addEventListener('keyup', (e) => {
       console.log(e.key);
       enterseq.push(e.key);
+      // my technique but save all key
       if (enterseq.length > 2) {
         console.log(enterseq.slice(1).slice(-password.length));
         let a = JSON.stringify(enterseq.slice(1).slice(-password.length));
         if (a === passphrase) {
           console.log("Yeh Man");
+          cornify_add();
         };
       };
+      // wesbos technic
+      enterseq.splice(-password.length - 1, enterseq.length - password.length);
+      console.log(enterseq);
     });
   </script>
 </body>
