@@ -27,4 +27,6 @@ function paintToCanvas() {
   }, 16);
 }
 
+// test
+
 getVideo();
